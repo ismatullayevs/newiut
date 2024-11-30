@@ -1,12 +1,13 @@
-let navbar = document.getElementById("navbar");
-
-window.onscroll = function () {
+document.addEventListener("scroll", () => {
+  const navbar = document.getElementById("navbar");
+  const breakpoint = window.innerHeight - 60;
   if (
-    document.body.scrollTop >= 50 ||
-    document.documentElement.scrollTop >= 50
+    document.body.scrollTop >= breakpoint ||
+    document.documentElement.scrollTop >= breakpoint
   ) {
-    navbar.classList.add("scrolled");
+    navbar.classList.remove("top");
   } else {
-    navbar.classList.remove("scrolled");
+    navbar.classList.add("top");
   }
-};
+});
+
