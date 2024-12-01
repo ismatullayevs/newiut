@@ -33,8 +33,9 @@
 
 main {
   margin-top: 100vh;
-  background-color: white;
+  background-color: #f8fafc;
   width: 100%;
+  overflow: hidden;
   height: max-content;
 }
 
@@ -96,6 +97,9 @@ main {
 
 #info {
   margin-top: 100px;
+  padding: 30px max(calc((100% - 1024px) / 2), 30px);
+  text-align: center;
+  background: white;
 }
 
 .container h2 {
@@ -112,7 +116,6 @@ main {
 
 #info iframe {
   width: 100%;
-  max-width: 700px;
   aspect-ratio: 2/1.15;
   margin: 0 auto;
   display: block;
@@ -135,6 +138,7 @@ main {
 .card {
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   position: relative;
+  background-color: white;
 }
 
 .card.twice {
@@ -200,15 +204,132 @@ main {
   display: block;
 }
 
+#contact-us {
+  margin-top: 100px;
+  background: white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#contact-us .inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 30px;
+  align-items: stretch;
+}
+
+#contact-us .left {
+  width: 100%;
+}
+
+#contact-us .info-group:not(:first-child) {
+  margin-top: 30px;
+}
+
+#contact-us .info-description {
+  margin-top: 10px;
+}
+
+.vr {
+  width: auto;
+  height: auto;
+  min-width: 1px;
+  min-height: 1px;
+  background-color: rgb(212, 212, 212);
+}
+
+#contact-us .right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#contact-us .right input,
+#contact-us .right textarea {
+  background-color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  border: 1px solid wheat;
+}
+
+#contact-us button {
+  padding: 10px 20px;
+}
+
+#contact-us .maps {
+  width: 100%;
+}
+
 footer {
   margin-top: 200px;
+  background: var(--primary);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
+
+footer .footer-links {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+footer hr {
+  border: none;
+  border-top: 1px solid #2166cf;
+}
+
+footer #note {
+  font-size: .9rem;
+  color: rgb(228, 228, 228);
+}
+
+footer .row h3 {
+  position: relative;
+  padding-bottom: 10px;
+}
+
+footer .row h3::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 50%;
+  height: 2px;
+  background-color: white;
+  transition: width .2s;
+}
+
+footer .row:hover h3::before {
+  width: 100%;
+}
+
+footer a:hover {
+  color: rgb(96, 192, 255);
+}
+
+footer .row .links {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  column-gap: 30px;
+  margin-top: 30px;
 }
 
 @media (max-width: 1024px) {
   .cards {
     grid-template-columns: repeat(3, 1fr);
   }
-  
+
   .card.twice {
     grid-column: unset;
   }
@@ -238,7 +359,8 @@ footer {
   }
 
   .container {
-    padding: 0 10px;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
   }
 
   #courses .course {
@@ -253,5 +375,10 @@ footer {
 @media screen and (max-width: 640px) {
   .cards {
     grid-template-columns: 1fr;
+  }
+
+  #contact-us .inner {
+    flex-direction: column-reverse;
+    justify-content: start;
   }
 }

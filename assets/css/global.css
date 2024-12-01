@@ -36,6 +36,11 @@ body {
     color: var(--text);
 }
 
+input, textarea, iframe {
+  background: none;
+  border: none;
+  outline: none;
+}
 
 .btn {
   border: none;
