@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+
+:root {
+  --primary: #0b459f;
+  --text: #303030;
+}
 
 *,
 *::before,
@@ -27,4 +33,25 @@ ul {
 body {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
+    color: var(--text);
+}
+
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 15px 30px;
+  font-weight: 600;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: box-shadow .2s;
+}
+
+.btn:hover {
+  box-shadow: inset 0em 0em 0em 10em rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
 }

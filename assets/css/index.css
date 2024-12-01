@@ -18,6 +18,7 @@
 
 #hero .content {
   text-align: center;
+  font-family: "Lato", sans-serif;
 }
 
 #hero h1 {
@@ -34,6 +35,7 @@ main {
   margin-top: 100vh;
   background-color: white;
   width: 100%;
+  height: max-content;
 }
 
 .container {
@@ -42,11 +44,214 @@ main {
 }
 
 #courses {
-  height: 1000px;
+  padding-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  row-gap: 30px;
+  column-gap: 30px;
+}
+
+#courses .course {
+  display: block;
+  width: 350px;
+  position: relative;
+}
+
+#courses .course:hover img {
+  transform: scale(1.1, 1.1);
+}
+
+#courses .image {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 5/3;
+}
+
+#courses .image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+  z-index: 2;
+}
+
+#courses .image img {
+  display: block;
+  transition: transform 0.5s;
+  z-index: 1;
+}
+
+#courses .title {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-weight: bold;
+  z-index: 3;
+}
+
+#info {
+  margin-top: 100px;
+}
+
+.container h2 {
+  color: var(--primary);
+  text-align: center;
+  font-size: 2.5rem;
+  text-transform: capitalize;
+}
+
+#info p {
+  line-height: 2rem;
+  margin-top: 30px;
+}
+
+#info iframe {
+  width: 100%;
+  max-width: 700px;
+  aspect-ratio: 2/1.15;
+  margin: 0 auto;
+  display: block;
+  margin-top: 50px;
+}
+
+#news {
+  margin-top: 100px;
+}
+
+.cards {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+
+.card {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  position: relative;
+}
+
+.card.twice {
+  grid-column: span 2;
+}
+
+.card .image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.card .content {
+  padding: 20px;
+}
+
+.card.twice .content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  color: white;
+}
+
+.card.twice .image {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+}
+
+.card.twice .image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+}
+
+.card.twice .category {
+  color: white;
+}
+
+.card .image img {
+  transition: transform 1s;
+  z-index: 1;
+}
+
+.card:hover .image img {
+  transform: scale(1.1, 1.1);
+}
+
+.card .category {
+  color: var(--primary);
+}
+
+.card .title {
+  margin-top: 10px;
+}
+
+.read-more {
+  text-align: center;
+  margin: 30px auto;
+  display: block;
+}
+
+footer {
+  margin-top: 200px;
+}
+
+@media (max-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .card.twice {
+    grid-column: unset;
+  }
+
+  .card.twice .content {
+    position: static;
+    color: unset;
+  }
+
+  .card.twice .category {
+    color: var(--primary);
+  }
+
+  .card.twice .image {
+    position: static;
+    height: 200px;
+  }
+
+  .card.twice .image::before {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  #hero h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  #courses .course {
+    width: 100%;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media screen and (max-width: 640px) {
-  #hero h1 {
-    font-size: 2rem;
+  .cards {
+    grid-template-columns: 1fr;
   }
 }

@@ -3,10 +3,12 @@ document.getElementById("nav-toggle").addEventListener("click", () => {
   navMenu.classList.toggle("active");
 });
 
+
+const search = document.getElementById("search")
 document.getElementById("search-button").addEventListener("click", () => {
-  document.getElementById("search").classList.add("active");
+  search.classList.add("active");
 });
 
 document.getElementById("cancel").addEventListener("click", () => {
-  document.getElementById("search").classList.remove("active");
+  search.classList.remove("active");
 });

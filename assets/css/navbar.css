@@ -8,7 +8,8 @@
   top: 0;
   width: 100%;
   transition: background-color 0.2s;
-  background: #0b459f;
+  background: var(--primary);
+  z-index: 100;
 }
 
 #navbar .brand {
@@ -58,7 +59,7 @@
   position: absolute;
   right: 0;
   top: 0;
-  background-color: #0b459f;
+  background-color: var(--primary);
   padding: 60px;
   z-index: 10;
   gap: 10px;
@@ -120,13 +121,14 @@
   display: none;
   padding: 20px;
   margin-right: -20px;
-  gap: 7px;
+  gap: 6px;
   cursor: pointer;
 }
 
 #nav-toggle span {
-  width: 27px;
-  height: 2px;
+  width: 30px;
+  height: 3px;
+  border-radius: 3px;
   background-color: white;
 }
 
@@ -149,7 +151,7 @@
     right: 0;
     bottom: 0;
     width: 100%;
-    background-color: #0b459f;
+    background-color: var(--primary);
     right: 60px;
     display: flex;
     flex-direction: column;
