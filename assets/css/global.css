@@ -46,7 +46,7 @@ iframe {
 .btn {
   border: none;
   outline: none;
-  padding: 15px 30px;
+  padding: 12px 30px;
   font-weight: 600;
   border-radius: 3px;
   cursor: pointer;
@@ -54,7 +54,7 @@ iframe {
 }
 
 .btn:hover {
-  box-shadow: inset 0em 0em 0em 10em rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0em 0em 0em 10em rgba(0, 0, 0, 0.1);
 }
 
 .btn-primary {
@@ -67,6 +67,13 @@ iframe {
   padding: 0 max(calc((100% - 1440px) / 2), 30px);
 }
 
+.container h2 {
+  color: var(--primary);
+  text-align: center;
+  font-size: 2.5rem;
+  text-transform: capitalize;
+}
+
 .coming-soon {
   height: calc(100vh - 60px);
   margin-top: 60px;
@@ -75,3 +82,44 @@ iframe {
   align-items: center;
   justify-content: center;
 }
+
+#hero {
+  width: 100%;
+  height: 100vh;
+  padding: 60px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)),
+    url("../images/wiut.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: fixed;
+  inset: 0;
+  z-index: -20;
+}
+
+#hero .content {
+  text-align: center;
+  font-family: "Lato", sans-serif;
+}
+
+#hero h1 {
+  font-size: 4rem;
+}
+
+#hero p {
+  margin-top: 10px;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+main#page {
+  margin-top: 100vh;
+  background-color: #f8fafc;
+  width: 100%;
+  overflow: hidden;
+  height: max-content;
+} 

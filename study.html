@@ -11,7 +11,7 @@
     <title>Study</title>
   </head>
   <body>
-    <div id="navbar">
+    <div id="navbar" class="top">
       <div class="brand">
         <a href="index.html">WIUT</a>
       </div>
@@ -42,56 +42,133 @@
         </div>
       </div>
     </div>
-
-    <div class="coming-soon">
-      <h1>Coming soon...</h1>
-    </div>
-
-    <footer class="container">
-      <div class="footer-links">
-        <div class="row">
-          <h3>Main</h3>
-          <div class="links">
-            <a href="#">Alumni Tour</a>
-            <a href="#">Intranet</a>
-            <a href="#">Web Mail</a>
-            <a href="#">Virtual</a>
-            <a href="#">FAQ</a>
-            <a href="#">Students</a>
-          </div>
-        </div>
-        <div class="row">
-          <h3>Courses</h3>
-          <div class="links">
-            <a href="#">Pre-Foundation</a>
-            <a href="#">Foundation Studies</a>
-            <a href="#">Undergraduate</a>
-            <a href="#">Postgraduate</a>
-            <a href="#">Graduate (PhD and DSc)</a>
-            <a href="#">Executive Courses</a>
-          </div>
-        </div>
-        <div class="row">
-          <h3>Quick Links</h3>
-          <div class="links">
-            <a href="#">About Us</a>
-            <a href="#">Careers</a>
-            <a href="#">Research</a>
-            <a href="#">Parents</a>
-            <a href="#">News</a>
-            <a href="#">Scientific Council</a>
-            <a href="#">Silk Road</a>
-            <a href="#">Virtual Reception</a>
-          </div>
-        </div>
+    
+    <section id="hero">
+      <div class="content">
+        <h1>Study</h1>
       </div>
-      <hr />
-      <p id="note">
-        This website was created to fulfill Web Technology module's requirements
-        and does not represent an actual company or service.
-      </p>
-    </footer>
+    </section>
+
+    <main id="page">
+      <section id="courses" class="container">
+        <h2>Courses</h2>
+        <div class="course-list">
+          <div class="course">
+            <div class="image">
+              <img
+                src="./assets/images/undergraduate.webp"
+                alt="course-image"
+              />
+            </div>
+            <div class="content">
+              <p class="title">Undergraduate</p>
+              <a href="#"><button class="btn btn-primary">Explore</button></a>
+            </div>
+          </div>
+          <div class="course">
+            <div class="image">
+              <img src="./assets/images/graduate.webp" alt="course-image" />
+            </div>
+            <div class="content">
+              <p class="title">Postgraduate</p>
+              <a href="#"><button class="btn btn-primary">Explore</button></a>
+            </div>
+          </div>
+          <div class="course">
+            <div class="image">
+              <img
+                src="./assets/images/pre-foundation.webp"
+                alt="course-image"
+              />
+            </div>
+            <div class="content">
+              <p class="title">Pre-Foundation</p>
+              <a href="#"><button class="btn btn-primary">Explore</button></a>
+            </div>
+          </div>
+          <div class="course">
+            <div class="image">
+              <img src="./assets/images/foundation.webp" alt="course-image" />
+            </div>
+            <div class="content">
+              <p class="title">Foundation</p>
+              <a href="#"><button class="btn btn-primary">Explore</button></a>
+            </div>
+          </div>
+          <div class="course">
+            <div class="image">
+              <img
+                src="./assets/images/phd-dsc-courses.webp"
+                alt="course-image"
+              />
+            </div>
+            <div class="content">
+              <p class="title">PhD and DSc Programmes</p>
+              <a href="#"><button class="btn btn-primary">Explore</button></a>
+            </div>
+          </div>
+          <div class="course">
+            <div class="image">
+              <img
+                src="./assets/images/executive-courses.webp"
+                alt="course-image"
+              />
+            </div>
+            <div class="content">
+              <p class="title">Executive Courses</p>
+              <a href="#"><button class="btn btn-primary">Explore</button></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="container">
+        <div class="footer-links">
+          <div class="row">
+            <h3>Main</h3>
+            <div class="links">
+              <a href="#">Alumni Tour</a>
+              <a href="#">Intranet</a>
+              <a href="#">Web Mail</a>
+              <a href="#">Virtual</a>
+              <a href="#">FAQ</a>
+              <a href="#">Students</a>
+            </div>
+          </div>
+          <div class="row">
+            <h3>Courses</h3>
+            <div class="links">
+              <a href="#">Pre-Foundation</a>
+              <a href="#">Foundation Studies</a>
+              <a href="#">Undergraduate</a>
+              <a href="#">Postgraduate</a>
+              <a href="#">Graduate (PhD and DSc)</a>
+              <a href="#">Executive Courses</a>
+            </div>
+          </div>
+          <div class="row">
+            <h3>Quick Links</h3>
+            <div class="links">
+              <a href="#">About Us</a>
+              <a href="#">Careers</a>
+              <a href="#">Research</a>
+              <a href="#">Parents</a>
+              <a href="#">News</a>
+              <a href="#">Scientific Council</a>
+              <a href="#">Silk Road</a>
+              <a href="#">Virtual Reception</a>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <p id="note">
+          This website was created to fulfill Web Technology module's
+          requirements and does not represent an actual company or service.
+        </p>
+      </footer>
+    </main>
 
     <script src="./assets/js/navbar.js"></script>
+    <script src="./assets/js/index.js"></script>
   </body>
 </html>
