@@ -1,0 +1,117 @@
+#featured {
+  max-width: 1024px;
+  margin: 100px auto;
+  display: flex;
+  align-items: stretch;
+  background: white;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#featured .image {
+  width: 100%;
+}
+
+#featured img {
+  display: block;
+}
+
+#featured .content {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.texts .date {
+  color: #999;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.texts h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+  text-align: left;
+  line-height: 1.2;
+}
+
+#featured .texts .description {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.articles .article {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.articles .article .image {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.articles .article .content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+}
+
+.article .texts .title {
+  color: #333;
+  font-size: 1rem;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 50px;
+}
+
+.pagination .box {
+  background: white;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.pagination .box.disabled {
+  color: #acacac;
+}
+
+.pagination .box.active {
+  background: #3e95fc;
+  border: none;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  #featured {
+    flex-direction: column;
+  }
+}
