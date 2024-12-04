@@ -1,3 +1,8 @@
+#hero {
+  background: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)),
+    url(../images/study.jpg) no-repeat center center/cover;
+}
+
 #courses {
   margin-top: 100px;
 }
@@ -29,42 +34,42 @@
 }
 
 .content p {
-    font-size: 1.3rem;
+  font-size: 1.3rem;
 }
 
 .content button {
-    background-color: #f76c02;
-    margin-top: 20px;
-    font-size: 1rem;
+  background-color: #f76c02;
+  margin-top: 20px;
+  font-size: 1rem;
 }
 
 .course .image {
-    position: relative;
-    z-index: 1;
-    height: 100%;
+  position: relative;
+  z-index: 1;
+  height: 100%;
 }
 
 .course .image::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    background: linear-gradient(rgba(31, 51, 117, 0.30), rgba(31, 51, 117, 1));
-    transition: opacity .5s;
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: linear-gradient(rgba(31, 51, 117, 0.3), rgba(31, 51, 117, 1));
+  transition: opacity 0.5s;
 }
 
 .course:hover .image::before {
-    opacity: .8;
+  opacity: 0.8;
 }
 
 .course .image img {
-    transition: transform .5s;
+  transition: transform 0.5s;
 }
 
 .course:hover .image img {
-    transform: scale(1.05, 1.05);
+  transform: scale(1.05, 1.05);
 }
 
 @media screen and (max-width: 1024px) {

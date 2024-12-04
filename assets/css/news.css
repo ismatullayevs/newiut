@@ -1,5 +1,4 @@
 #featured {
-  max-width: 1024px;
   margin: 100px auto;
   display: flex;
   align-items: stretch;
@@ -10,6 +9,7 @@
 
 #featured .image {
   width: 100%;
+  aspect-ratio: 16/9;
 }
 
 #featured img {
@@ -64,12 +64,16 @@
 
 .articles .article .image {
   width: 100%;
-  aspect-ratio: 16/9;
+  height: 200px;
+  flex-shrink: 0;
+  flex-grow: 0;
 }
 
 .articles .article .content {
   display: flex;
+  height: 100%;
   flex-direction: column;
+  justify-content: space-between;
   gap: 30px;
   padding: 20px;
 }
