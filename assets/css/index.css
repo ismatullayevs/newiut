@@ -183,6 +183,11 @@
   background: white;
   padding-top: 30px;
   padding-bottom: 30px;
+  color: rgb(68, 68, 68);
+}
+
+#contact-us h2 {
+  margin-bottom: 50px;
 }
 
 #contact-us .inner {

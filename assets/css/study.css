@@ -40,7 +40,8 @@
 
 .course .image {
     position: relative;
-    z-index: 1
+    z-index: 1;
+    height: 100%;
 }
 
 .course .image::before {

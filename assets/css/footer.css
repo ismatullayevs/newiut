@@ -11,7 +11,8 @@ footer {
 
 footer .footer-links {
   display: flex;
-  gap: 20px;
+  column-gap: 20px;
+  row-gap: 40px;
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -60,4 +61,10 @@ footer .row .links {
   row-gap: 10px;
   column-gap: 30px;
   margin-top: 30px;
+}
+
+@media screen and (max-width: 640px) {
+  footer .row .links {
+    height: auto;
+  }
 }

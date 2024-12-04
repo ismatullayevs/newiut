@@ -33,6 +33,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   color: var(--text);
+  line-height: 1.5rem;
 }
 
 input,
@@ -123,3 +124,10 @@ main#page {
   overflow: hidden;
   height: max-content;
 } 
+
+@media screen and (max-width: 640px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
