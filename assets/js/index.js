@@ -11,11 +11,6 @@ document.addEventListener("scroll", () => {
   }
 });
 
-const heading = document.createElement("h1");
-heading.textContent = "Westminster";
-const hero = document.querySelector("#hero .content");
-hero.appendChild(heading);
-
 document
   .getElementById("message-form")
   .addEventListener("submit", function (e) {
